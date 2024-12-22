@@ -1,4 +1,4 @@
-# This program determines whether a number a user inputs is even or odd
+# This program determines whether a number a user inputs is even
 
 
 def main():
