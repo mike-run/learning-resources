@@ -6,7 +6,11 @@
 
 def main():
     time = input("What time is it? ")
-    time = convert(time)
+
+    if "a.m." in time or "p.m." in time:
+        time = convert_to_24_hour(time)
+    else:
+        time = convert(time)
 
     if 7 <= time <= 8:
         print("breakfast time")
@@ -16,6 +20,29 @@ def main():
         print("dinner time")
     else:
         print("")
+
+
+def convert_to_24_hour(time):
+    if "a.m." in time:
+        prefix, _ = time.split(" a.m.")
+        hours, minutes = prefix.split(":")
+        hours = int(hours)
+        minutes = int(minutes) / 60
+        if hours == 12:
+            hours = 0
+        else:
+            hours = int(hours)
+    elif "p.m." in time:
+        prefix, _ = time.split(" p.m.")
+        hours, minutes = prefix.split(":")
+        hours = int(hours)
+        minutes = int(minutes) / 60
+        if hours != 12:
+            hours += 12
+        else:
+            hours = int(hours)
+
+    return hours + minutes
 
 
 def convert(time):
