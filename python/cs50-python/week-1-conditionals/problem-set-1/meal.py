@@ -1,7 +1,6 @@
 # This program prompts the user for a time and outputs whether it's breakfast
 # time, lunch time, or dinner time. If it's not time for a meal, it outputs
-# nothing (this program assumes that the users input will be formatted in 
-# 24-hour time)
+# nothing
 
 
 def main():
