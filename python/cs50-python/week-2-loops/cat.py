@@ -29,7 +29,9 @@ main()
 # print("meow\n" * 3, end="")
 
 
-# While loop 
+# While loop: good for looping when you're not sure how many times you need to
+# repeat something, but you know the condition for stopping; or, need an
+# infinite loop that will only exit under certain circumstances (user input)
 # i = 0
 # while i < 3:
 #     print("meow")
