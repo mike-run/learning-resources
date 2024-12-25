@@ -12,10 +12,10 @@ def convert(camel_case):
     snake_case = ""
 
     for character in camel_case:
-        if character.isupper() == False:
-            snake_case += character
-        else:
+        if character.isupper():
             snake_case += "_" + character.lower()
+        else:
+            snake_case += character
 
     return snake_case
 
